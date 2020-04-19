@@ -1,0 +1,2 @@
+class IncrementRedStateAction {}
+class DecrementRedStateAction {}
