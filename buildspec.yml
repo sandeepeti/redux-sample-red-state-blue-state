@@ -11,7 +11,7 @@ phases:
       - flutter precache
   build:
     commands:
-      - flutter build
+      - flutter build apk
 artifacts:
   files:
-    - ./build/app/outputs/apk/debug/app-debug.apk
+    - build/app/outputs/apk/debug/app-debug.apk
