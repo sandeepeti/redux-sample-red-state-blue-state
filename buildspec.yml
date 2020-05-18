@@ -1,9 +1,17 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - apt-get update -y
+      - apt install openjdk-8-jdk
+      - wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.17.1-stable.tar.xz
+      - tar xf flutter_linux_1.17.1-stable.tar.xz
+      - export PATH="$PATH:`pwd`/flutter/bin"
+      - flutter precache
   build:
     commands:
-      - flutter run
+      - flutter build
 artifacts:
   files:
     - build/app/outputs/apk/debug/app-debug.apk
