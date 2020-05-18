@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - flutter run
+artifacts:
+  files:
+    - build/app/outputs/apk/debug/app-debug.apk
